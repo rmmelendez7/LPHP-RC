@@ -1,4 +1,4 @@
-# Low-Power-High-Performance-Reconfigureable-Computing-LPHP-RC-
+# Low-Power-High-Performance-Reconfigureable-Computing-LPHP-RC
 
 Abstract:
 
