@@ -1,0 +1,71 @@
+/**
+ * Simple Matrix multiplication for Microblaze Applications 
+ * 
+ * Overview:
+ * Dynamically modify array size to represent basic image processing techniques 
+ * and obtain performance benchmarks across multiple soft-cores* 
+ * 
+ */
+
+#include <stdio.h>
+
+const int X_SIZE =20; // X size for array
+const int Y_SIZE =20; // Y size for array
+
+int main()
+{
+	 int a[X_SIZE][Y_SIZE];
+	 int b[X_SIZE][Y_SIZE];
+	 int c[X_SIZE][Y_SIZE];
+
+    for( int i =0;i < X_SIZE; i++) // initialize arrays a and b 
+    {
+        for ( int j=0; j< Y_SIZE; j++)
+        {
+         a[i][j] = 50;
+         b[i][j] = 40;
+        }
+    }
+
+    for( int i =0;i < X_SIZE; i++)
+    {
+      printf("\n");
+      printf("%d:  ",i);
+        for ( int j=0; j< Y_SIZE; j++)
+          {
+             printf("%d ",a[i][j]);
+          }
+        }
+
+        printf("\n");
+        printf("\n");
+        printf("\n");
+
+
+    for( int i =0;i < X_SIZE; i++)
+        {
+          printf("\n");
+          printf("%d:  ",i);
+
+
+            for ( int j=0; j< Y_SIZE;j++)
+            {
+            		printf("%d:  ",j);
+            		printf("%d ",b[i][j]);
+            }
+        }
+
+    for( int i =0;i < X_SIZE; i++) 
+    {
+    	printf("\n");
+        printf("%d:  ",i);
+    	printf("\n");
+        for ( int j=0; j< Y_SIZE; j++)
+        {
+         c[i][j] = a[i][j]+b[i][j];
+         printf("%d:  ",j);
+         printf("%d ",c[i][j]);
+        }
+    }
+    return 0;
+}
